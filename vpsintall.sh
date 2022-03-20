@@ -6,6 +6,7 @@ unzip -qq -n ngrok-stable-linux-amd64.zip
 apt-get install openssh-server -y
 useradd -m vps
 adduser vps sudo
+apt-get install sudo -y
 echo 'vps:Usakhosting1!' | chpasswd
 sed -i 's//bin/sh//bin/bash/g' /etc/passwd
 service ssh restart
